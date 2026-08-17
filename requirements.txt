@@ -1,0 +1,17 @@
+# ============================================================================
+# SSplain — dependencies (pip). macOS / Linux, CPU or NVIDIA GPU.
+# Recommended Python: 3.10 (3.9-3.11 all fine)
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+# ----------------------------------------------------------------------------
+
+# Core — required by the ssplain package itself
+torch>=2.0                # any 2.x (Intel macOS caps at 2.2.2 — torch>=2.3 has no Intel-mac wheels)
+torchmetrics>=1.0          # TotalVariation used in the ADMM smoothness term
+numpy>=1.24,<2            # numpy 1.x works with every torch; NumPy 2.x needs torch>=2.4
+matplotlib>=3.7            # ssplain.visualize() and visualizations/
+
+# Examples — dataset loading and training
+torchvision>=0.15         # MNIST / FashionMNIST datasets in examples/
+tqdm>=4.65
+# ============================================================================
